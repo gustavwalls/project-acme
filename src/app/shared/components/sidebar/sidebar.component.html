@@ -1,0 +1,10 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav mode="side" opened class="sidenav">
+    <mat-toolbar>Menú</mat-toolbar>
+    <mat-nav-list>
+      <a *ngIf="role === 'operario'" mat-list-item routerLink="/products">Productos</a>
+      <a *ngIf="role === 'supervisor'" mat-list-item routerLink="/reports">Reportes</a>
+      <a mat-list-item (click)="logout()">Cerrar Sesión</a>
+    </mat-nav-list>
+  </mat-sidenav>
+</mat-sidenav-container>

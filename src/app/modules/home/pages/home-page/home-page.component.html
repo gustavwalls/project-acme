@@ -1,0 +1,14 @@
+<mat-sidenav-container class="layout-container">
+    <mat-sidenav #sidenav mode="side" [opened]="sidebarOpened" [class.closed]="!sidebarOpened" class="layout-sidebar">
+        <sidebar [isOpened]="sidebarOpened"></sidebar>
+    </mat-sidenav>    
+    <mat-sidenav-content class="layout-content">
+        <mat-toolbar class="main-toolbar">
+            <button mat-icon-button (click)="toggleSidebar()">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <span>Aplicativo ACME</span>
+        </mat-toolbar>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

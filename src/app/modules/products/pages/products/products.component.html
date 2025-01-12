@@ -1,0 +1,22 @@
+<div style="padding: 8px 32px;">
+    <div class="container_title">
+        <h1>Lista de Productos</h1>
+
+        <div>
+            <a mat-fab extended routerLink="/products/create">
+                <mat-icon>add_shopping_cart</mat-icon>
+                Agregar producto
+            </a>
+        </div>
+    </div>
+    
+    <shared-table
+    [displayedColumns]="displayedColumns"
+    [columnHeaders]="columnHeaders"
+    [dataSource]="dataSource"
+    [pageSizeOptions]="[5, 10, 20]"
+    (delete)="handleDelete($event)"
+    (edit)="handleEdit($event)">
+  </shared-table>
+
+</div>

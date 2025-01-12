@@ -1,0 +1,38 @@
+<div style="max-width: 100%; margin: auto; padding: 8px 32px;">
+  <h1>{{ isEditMode ? 'Editar Producto' : 'Crear Producto' }}</h1>
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="outline" style="width: 100%; margin-bottom: 16px;">
+      <mat-label>Nombre del Producto</mat-label>
+      <input matInput formControlName="title" placeholder="Ingresa el nombre del producto" />
+      <mat-error *ngIf="productForm.get('title')?.invalid && productForm.get('title')?.touched">
+        Este campo es obligatorio
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" style="width: 100%; margin-bottom: 16px;">
+      <mat-label>Precio</mat-label>
+      <input matInput type="number" formControlName="precio" placeholder="Ingresa el precio del producto" />
+      <mat-error *ngIf="productForm.get('precio')?.invalid && productForm.get('precio')?.touched">
+        Ingresa un precio válido (mayor a 0)
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" style="width: 100%; margin-bottom: 16px;">
+      <mat-label>Descripción</mat-label>
+      <textarea matInput formControlName="descripcion" placeholder="Ingresa una descripción del producto"></textarea>
+      <mat-error *ngIf="productForm.get('descripcion')?.invalid && productForm.get('descripcion')?.touched">
+        Este campo es obligatorio
+      </mat-error>
+    </mat-form-field>
+
+    <div style="display: flex; gap: 15px;">
+      <a mat-raised-button color="primary" [routerLink]="'/products'">
+        <mat-icon>keyboard_backspace</mat-icon>
+        Regresar
+      </a>
+      <button mat-raised-button color="primary" type="submit" [disabled]="productForm.invalid">
+        {{ isEditMode ? 'Actualizar Producto' : 'Crear Producto' }}
+      </button>
+    </div>
+  </form>
+</div>

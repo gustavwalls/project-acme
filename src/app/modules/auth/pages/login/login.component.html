@@ -1,0 +1,21 @@
+<div class="login-container">
+    <mat-card>
+      <h1>Iniciar sesion</h1>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" type="email" placeholder="Ingresa tu correo">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="password" type="password" placeholder="Ingresa tu contraseña">
+        </mat-form-field>
+        <button
+         mat-raised-button color="primary" 
+         type="submit"
+        [disabled]="loginForm.invalid"
+        >Ingresar</button>
+      </form>
+     <!--  <p class="helper-text">¿No tienes cuenta? <a href="#">555-555-555</a></p> -->
+    </mat-card>
+  </div>

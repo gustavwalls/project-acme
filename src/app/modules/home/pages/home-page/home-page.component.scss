@@ -1,0 +1,24 @@
+.layout-container {
+    height: 100vh;
+    display: flex;
+}
+
+.layout-sidebar {
+    width: 240px;
+}
+
+.layout-content {
+    flex: 1;
+    overflow: auto;
+}
+
+.main-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

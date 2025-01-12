@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "title": "gaseosa ",
+      "precio": 2.62,
+      "descripcion": "test",
+      "id": "eqd22"
+    },
+    {
+      "title": "cerveza",
+      "precio": 19.32,
+      "descripcion": "fria",
+      "id": "asdwq1"
+    },
+    {
+      "id": "f759",
+      "title": "canchita",
+      "precio": 2,
+      "descripcion": "canchita 1 kg"
+    },
+    {
+      "title": "sublime",
+      "precio": 3,
+      "descripcion": "blanco",
+      "id": "88ef"
+    },
+    {
+      "id": "7678",
+      "title": "jabon",
+      "precio": 2,
+      "descripcion": "jabon liquido"
+    }
+  ]
+}
