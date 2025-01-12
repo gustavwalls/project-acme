@@ -3,6 +3,12 @@
         <h1>Reporte de Productos</h1>
 
     </div>
+
+    <mat-form-field appearance="outline" style="width: 100%; margin-bottom: 16px;">
+      <mat-label>Buscar producto</mat-label>
+      <input matInput [formControl]="searchControl" placeholder="Ingrese el nombre del producto">
+      <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
     
     <shared-table
     [displayedColumns]="displayedColumns"

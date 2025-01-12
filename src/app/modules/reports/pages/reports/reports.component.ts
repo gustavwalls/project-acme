@@ -4,11 +4,13 @@ import { TableComponent } from '../../../../shared/components/table/table.compon
 import { RouterModule } from '@angular/router';
 import { MatTableDataSource } from '@angular/material/table';
 import { ProductService } from '../../../products/services/product.service';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-reports',
   standalone: true,
   imports: [
+    ReactiveFormsModule,
     RouterModule,
     TableComponent,
     MaterialAngularModule
@@ -26,17 +28,25 @@ export class ReportsComponent implements OnInit {
   };
   dataSource = new MatTableDataSource<any>([]);
 
+  searchControl = new FormControl('');
+
   constructor(private productService: ProductService, private router: RouterModule
   ) { }
 
   ngOnInit(): void {
     this.loadProducts();
-
+    this.searchControl.valueChanges.subscribe((value:any) => {
+      this.applyFilter(value);
+    });
   }
 
   loadProducts(): void {
     this.productService.getProducts().subscribe((data) => {
       this.dataSource.data = data;
     });
+  }
+
+    applyFilter(filterValue: string): void {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 }
