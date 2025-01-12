@@ -2,11 +2,17 @@
 
 Este proyecto fue creado con [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
 
+## Ejecucion del proyecto
+
+1.Clonar y abrir el proyecto , abrir una terminar y ejecutar `git checkout master`.
+
+1.Ejecutar `npm i --force` para instalar dependencias del proyecto.
+
 ## Servidor de desarrollo
 
 1.Ejecutar `json-server --watch db.json` para la BD del servidor.
 
-2.Ejecutar `ng s` para levantar el cliente.
+2.Abrir otra termianr y ejecutar `ng s` para levantar el cliente.
 
 3.Navegar a `http://localhost:4200/` para la ejecucion del aplicativo.
 
