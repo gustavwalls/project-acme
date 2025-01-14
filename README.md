@@ -10,11 +10,13 @@ Este proyecto fue creado con [Angular CLI](https://github.com/angular/angular-cl
 
 ## Servidor de desarrollo
 
-1.Ejecutar `json-server --watch db.json` para la BD del servidor.
+1.Ejecutar `npm install -g json-server` para la BD del servidor.
 
-2.Abrir otra termianr y ejecutar `ng s` para levantar el cliente.
+2.Ejecutar `json-server --watch db.json` para la BD del servidor.
 
-3.Navegar a `http://localhost:4200/` para la ejecucion del aplicativo.
+3.Abrir otra termianr y ejecutar `ng s` para levantar el cliente.
+
+4.Navegar a `http://localhost:4200/` para la ejecucion del aplicativo.
 
 ## Sesiones del aplicativo
 
